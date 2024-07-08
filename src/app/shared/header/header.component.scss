@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    align-items: center;
+
+    a{
+        cursor: pointer;
+    }
+
+    img{
+        height: 3rem;
+    }
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+}
+
+.title {
+    font-size: 1.5em; /* Tamaño del título */
+    color:white;
+}

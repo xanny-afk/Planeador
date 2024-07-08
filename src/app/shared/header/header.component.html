@@ -1,0 +1,18 @@
+<header>
+    <div class="logo-title-container">
+        <a routerLink="">
+            <img src="https://centrodelenguas.utp.ac.pa/App_Themes/Imagenes/LogoCel512Blanco.png" alt="Logo" class="logo">
+        </a>
+        <h1 class="title">CEL</h1>
+    </div>
+    
+    @if (showButtons) {
+        <section>
+            @if (isAuthenticated) {
+                <button mat-button color="warn" (click)="authService.logout()">Cerrar sesión</button>
+            } @else {
+                <button mat-button color="secundary" (click)="authService.loginWithRedirect()">Iniciar sesión</button>
+            }
+        </section>
+    }
+</header>

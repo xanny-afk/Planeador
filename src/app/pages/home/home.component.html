@@ -1,0 +1,22 @@
+<section>
+    <p>Bienvenido</p>
+
+    @if (isLoaded) {
+        <section>
+            @if (user) {
+                <span>{{user.name}}, elige una opción</span>
+                <div>
+                    <button mat-button color="primary" routerLink="calendario"> Eventos</button>
+                    <button mat-button color="warn" routerLink="profile"> Perfil</button>
+                    <button mat-button color="secundary" routerLink="estudiantes"> Estudiantes</button>
+                    <button mat-button color="primary" routerLink=""> Profesores</button>
+                    <button mat-button color="warn" routerLink=""> Cursos</button>
+                </div>
+            }@else {
+                <button mat-button color="primary" (click)="authService.loginWithRedirect"> Iniciar sesión</button>
+        
+            }
+        </section>
+    }
+
+</section>
